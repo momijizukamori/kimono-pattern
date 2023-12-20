@@ -15,18 +15,18 @@ import { z } from "zod"
 // }
 
 export const measurementsSchema = z.object({
-    neck_circ: z.coerce.number(), // C
-    hips: z.coerce.number(), // G
-    height: z.coerce.number(), // J
-    neck_floor: z.coerce.number(), // K
-    shoulder_sternum: z.coerce.number(), // N
-    shoulder_navel: z.coerce.number(), // Q
-    shoulder: z.coerce.number(), // A (women) or B (men)
-    sleeve: z.coerce.number(), // H (women) or I (men)
-    sleeve_length: z.coerce.number(),
-    palm: z.coerce.number(), // Y
-    handspan: z.coerce.number() // W
-  });
+    neck_circ: z.coerce.number().positive(), // C
+    hips: z.coerce.number().positive(), // G
+    height: z.coerce.number().positive(), // J
+    neck_floor: z.coerce.number().positive(), // K
+    shoulder_sternum: z.coerce.number().positive(), // N
+    shoulder_navel: z.coerce.number().positive(), // Q
+    shoulder: z.coerce.number().positive(), // A (women) or B (men)
+    sleeve: z.coerce.number().positive(), // H (women) or I (men)
+    sleeve_length: z.coerce.number().positive(),
+    palm: z.coerce.number().positive(), // Y
+    handspan: z.coerce.number().positive() // W
+  }).required();
 
 export const fabricWidthSchema = z.coerce.number().default(54);
   
