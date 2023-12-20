@@ -1,6 +1,8 @@
 import Raphael from 'raphael';
 import { MensKimono } from './mens';
-import { Measurements, measurementsSchema } from './types';
+import { WomensKimono } from './womens';
+import { Measurements, measurementsSchema, fabricWidthSchema } from './types';
+import { ZodError } from 'zod';
 
   declare module "raphael" {
     interface RaphaelPaper {
@@ -80,44 +82,63 @@ import { Measurements, measurementsSchema } from './types';
   
 
 window.onload = function () {
-  // let measurements = {
-  //   neck_circ: 13,
-  //   hips: 38,
-  //   height: 58,
-  //   neck_floor: 52,
-  //   shoulder_sternum: 6,
-  //   shoulder_navel: 19,
-  //   shoulder: 26,
-  //   sleeve: 10,
-  //   palm: 4,
-  //   handspan: 8,
-  // };
-
-  // let kimono = new MensKimono(measurements);
-  // kimono.setScale(10);
-  // kimono.construct();
   const form = document.getElementById('form');
   if (form) {
     form.addEventListener("submit", generate);
   }
 
+  const width = document.getElementById('fabric_width');
+  if (width) {
+    width.addEventListener("change", resizeFabric);
+  }
+
+}
+
+function resizeFabric(e: Event): void {
+  e.preventDefault();
+  e.stopPropagation();
+  const fabric_width = document.getElementById('fabric_width') as HTMLInputElement;
+  const width = fabricWidthSchema.parse(fabric_width?.value);
+  //let clearfix = document.getElementsByClassName('clearfix');
+  let fabric = document.getElementById('fabric');
+  if (fabric) {
+    fabric.style.width = `${ width * 10 }px`
+  }
 
 }
 
 function generate(e: Event): void {
   e.preventDefault();
   e.stopPropagation();
-  const svgs = document.querySelectorAll('svg');
-  svgs.forEach( el => {el.remove();});
-  const measurements = formToMeasure();
-  let kimono = new MensKimono(measurements);
-  // kimono.setScale(10);
-  kimono.construct();
-}
+  try {
+    const form = new FormData(document.getElementById('form') as HTMLFormElement);
+    const obj = Object.fromEntries(form.entries());
+    const measurements = measurementsSchema.parse(obj);
+    const erorrs = document.querySelectorAll('.error');
+    erorrs.forEach( el => { el.classList.remove('error');});
+    const svgs = document.querySelectorAll('svg');
+    svgs.forEach( el => {el.remove();});
 
-function formToMeasure(): Measurements {
-  const form = new FormData(document.getElementById('form') as HTMLFormElement);
-  const obj = Object.fromEntries(form.entries());
-  const measurements = measurementsSchema.parse(obj);
-  return measurements;
+    let kimono;
+    if (form.get('style') == 'womens') {
+      kimono = new WomensKimono(measurements);
+    } else {
+      kimono = new MensKimono(measurements);
+    }
+  
+    // kimono.setScale(10);
+    kimono.construct();
+  } catch (error) {
+    if (error instanceof ZodError) {
+      error.issues.forEach(error => {
+        const path = error.path[0];
+        let field = document.querySelector(`label[for=${path}]`);
+        if (field) {
+          field.classList.add('error');
+        }
+      })
+    }
+
+  }
+
 }

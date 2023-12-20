@@ -21,11 +21,14 @@ export const measurementsSchema = z.object({
     neck_floor: z.coerce.number(), // K
     shoulder_sternum: z.coerce.number(), // N
     shoulder_navel: z.coerce.number(), // Q
-    shoulder: z.coerce.number(),
-    sleeve: z.coerce.number(),
+    shoulder: z.coerce.number(), // A (women) or B (men)
+    sleeve: z.coerce.number(), // H (women) or I (men)
+    sleeve_length: z.coerce.number(),
     palm: z.coerce.number(), // Y
     handspan: z.coerce.number() // W
   });
+
+export const fabricWidthSchema = z.coerce.number().default(54);
   
 export type Measurements = z.infer<typeof measurementsSchema>;
 

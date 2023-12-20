@@ -8,7 +8,6 @@ span {
 }
 
 #fabric {
-  width: 400px;
   border: 1px solid #000;
   background-color: #eee;
   display: inline-block;
@@ -27,15 +26,23 @@ span {
   width: 500px;
   vertical-align: top;
 }
+
+.error::after {
+  content: "Must be a number!";
+  color: red;
+  font-size: smaller;
+  padding-left: 0.5rem;
+}
 </style>
 </head>
 <body>
 
 <form id="form">
+  <label for="fabric_width">Fabric width</label> <input type="number" name="fabric_width" id="fabric_width">
   <fieldset>
     <legend>Kimono style</legend>
-    <label for="mens">Men's</label></label><input type="radio" name="style" id="mens" value="mens" checked disabled>
-    <label for="womens">Women's</label></label><input type="radio" name="style" id="womens" value="womens" disabled>
+    <label for="mens">Men's</label></label><input type="radio" name="style" id="mens" value="mens" checked>
+    <label for="womens">Women's</label></label><input type="radio" name="style" id="womens" value="womens">
   </fieldset>
   <fieldset>
     <legend>Kimono lining style</legend>
@@ -52,9 +59,10 @@ span {
 <label for="shoulder_sternum">Shoulder to mid-sternum</label> <input type="number" name="shoulder_sternum" id="shoulder_sternum" value="6" />
 <label for="handspan">Width of spread hand</label> <input type="number" name="handspan" id="handspan" value="8" />
 <label for="palm">Width of palm</label> <input type="number" id="palm" name="palm" value="4" />
+<label for="sleeve_length">Sleeve length</label> <input type="number" id="sleeve_length" name="sleeve_length" value="30" />
 <button name="submit" id="submit">Generate</button>
 </form>
-<div id="fabric">
+<div id="fabric" style="width:540px">
   <span id="left_overlap"></span><span id="right_overlap"></span><span id="left_sleeve"></span><span id="right_sleeve"></span><span id="body"></span><span id="collar"></span><span id="clearfix"></span>
   </div>
 </body>
