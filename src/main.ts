@@ -1,5 +1,6 @@
 import Raphael from 'raphael';
 import { MensKimono } from './mens';
+import { Measurements } from './types';
 
   declare module "raphael" {
     interface RaphaelPaper {
@@ -96,4 +97,10 @@ window.onload = function () {
   kimono.setScale(10);
   kimono.construct();
 
+}
+
+function formToMeasure(): Measurements {
+  const form = new FormData(document.getElementById('form') as HTMLFormElement);
+  let obj = Object.fromEntries(form.entries());
+  return obj as unknown as Measurements;
 }
