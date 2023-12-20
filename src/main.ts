@@ -1,7 +1,7 @@
 import Raphael from 'raphael';
 import { MensKimono } from './mens';
 import { WomensKimono } from './womens';
-import { Measurements, measurementsSchema, fabricWidthSchema } from './types';
+import { measurementsSchema, fabricWidthSchema } from './types';
 import { ZodError } from 'zod';
 
   declare module "raphael" {
