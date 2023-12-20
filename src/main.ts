@@ -99,6 +99,7 @@ function resizeFabric(e: Event): void {
   e.stopPropagation();
   const fabric_width = document.getElementById('fabric_width') as HTMLInputElement;
   const width = fabricWidthSchema.parse(fabric_width?.value);
+  fabric_width.value = `${width}`; // in case we're using the default
   //let clearfix = document.getElementsByClassName('clearfix');
   let fabric = document.getElementById('fabric');
   if (fabric) {

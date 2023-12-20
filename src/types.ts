@@ -28,7 +28,7 @@ export const measurementsSchema = z.object({
     handspan: z.coerce.number().positive() // W
   }).required();
 
-export const fabricWidthSchema = z.coerce.number().default(54);
+export const fabricWidthSchema = z.coerce.number().gt(13).lt(120).default(54);
   
 export type Measurements = z.infer<typeof measurementsSchema>;
 
