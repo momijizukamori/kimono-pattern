@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  base: 'https://momijizukamori.github.io/bookbinder-js/',
+  base: '/kimono-pattern/',
   test: {
     environment: 'jsdom'
   }
