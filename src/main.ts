@@ -1,6 +1,6 @@
 import Raphael from 'raphael';
 import { MensKimono } from './mens';
-import { Measurements } from './types';
+import { Measurements, measurementsSchema } from './types';
 
   declare module "raphael" {
     interface RaphaelPaper {
@@ -80,27 +80,44 @@ import { Measurements } from './types';
   
 
 window.onload = function () {
-  let measurements = {
-    neck_circ: 13,
-    hips: 38,
-    height: 58,
-    neck_floor: 52,
-    shoulder_sternum: 6,
-    shoulder_navel: 19,
-    shoulder: 26,
-    sleeve: 10,
-    palm: 4,
-    handspan: 8,
-  };
+  // let measurements = {
+  //   neck_circ: 13,
+  //   hips: 38,
+  //   height: 58,
+  //   neck_floor: 52,
+  //   shoulder_sternum: 6,
+  //   shoulder_navel: 19,
+  //   shoulder: 26,
+  //   sleeve: 10,
+  //   palm: 4,
+  //   handspan: 8,
+  // };
 
+  // let kimono = new MensKimono(measurements);
+  // kimono.setScale(10);
+  // kimono.construct();
+  const form = document.getElementById('form');
+  if (form) {
+    form.addEventListener("submit", generate);
+  }
+
+
+}
+
+function generate(e: Event): void {
+  e.preventDefault();
+  e.stopPropagation();
+  const svgs = document.querySelectorAll('svg');
+  svgs.forEach( el => {el.remove();});
+  const measurements = formToMeasure();
   let kimono = new MensKimono(measurements);
-  kimono.setScale(10);
+  // kimono.setScale(10);
   kimono.construct();
-
 }
 
 function formToMeasure(): Measurements {
   const form = new FormData(document.getElementById('form') as HTMLFormElement);
-  let obj = Object.fromEntries(form.entries());
-  return obj as unknown as Measurements;
+  const obj = Object.fromEntries(form.entries());
+  const measurements = measurementsSchema.parse(obj);
+  return measurements;
 }

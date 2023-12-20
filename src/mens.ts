@@ -16,12 +16,11 @@ export class MensKimono extends KimonoPattern {
         const bottom = ((this.m.hips / 2) + (this.m.neck_circ / 4)) * this.scale;
         const sidediff = (bodywidth - bottom) / 2;
         const sidelength = ((this.m.neck_floor - this.m.shoulder_navel) + 5) * this.scale;
-        const shoulder = bodylength / 2;
-        const bottom_sidelength = shoulder +( this.m.shoulder_navel  * this.scale);
+        const shoulder_offset = bodylength / 2;
         const center = bodywidth / 2;
         const collaroffset = (this.m.neck_circ / 4)  * this.scale;
         const foldoffset = 5 * this.scale;
-        const bottomoffset = shoulder + (this.m.shoulder_navel * this.scale);
+        const bottomoffset = shoulder_offset + (this.m.shoulder_navel * this.scale);
 
         this.c = {
             bodylength,
@@ -36,12 +35,11 @@ export class MensKimono extends KimonoPattern {
             bottom,
             sidediff,
             sidelength,
-            bottom_sidelength,
             center,
             collaroffset,
             foldoffset,
             bottomoffset,
-            shoulder            
+            shoulder_offset            
         };
         
     }
@@ -80,33 +78,33 @@ export class MensKimono extends KimonoPattern {
 
         var body = Raphael("body", this.c.bodywidth, this.c.bodylength);
         body.rect(0, 0, this.c.bodywidth, this.c.bodylength);
-        body.fold(0, this.c.shoulder, this.c.bodywidth, this.c.shoulder);
+        body.fold(0, this.c.shoulder_offset, this.c.bodywidth, this.c.shoulder_offset);
         
         body.seam(0, this.c.sidelength - this.c.foldoffset, this.c.bodywidth, this.c.sidelength - this.c.foldoffset);
         body.seam(0, this.c.sidelength, this.c.bodywidth, this.c.sidelength);
         body.fold(0, this.c.sidelength - (this.c.foldoffset/2), this.c.bodywidth, this.c.sidelength - (this.c.foldoffset/2));
         body.seam(this.c.sidediff, 0, this.c.sidediff, this.c.sidelength);
-        body.seam(this.c.sidediff, this.c.sidelength, 0, this.c.shoulder);
+        body.seam(this.c.sidediff, this.c.sidelength, 0, this.c.shoulder_offset);
         body.seam(this.c.bodywidth - this.c.sidediff, 0, this.c.bodywidth - this.c.sidediff, this.c.sidelength);
-        body.seam(this.c.bodywidth - this.c.sidediff, this.c.sidelength, this.c.bodywidth, this.c.shoulder);
+        body.seam(this.c.bodywidth - this.c.sidediff, this.c.sidelength, this.c.bodywidth, this.c.shoulder_offset);
         
         body.seam(0, this.c.bottomoffset, this.c.bodywidth, this.c.bottomoffset);
         body.seam(0, this.c.bottomoffset + this.c.foldoffset , this.c.bodywidth, this.c.bottomoffset + this.c.foldoffset);
         body.fold(0, this.c.bottomoffset + (this.c.foldoffset/2) , this.c.bodywidth, this.c.bottomoffset + (this.c.foldoffset/2));
-        body.seam(0, this.c.shoulder, this.c.sidediff, this.c.bottomoffset);
+        body.seam(0, this.c.shoulder_offset, this.c.sidediff, this.c.bottomoffset);
         body.seam(this.c.sidediff, this.c.bottomoffset, this.c.sidediff, this.c.bodylength );
-        body.seam(this.c.bodywidth, this.c.shoulder, this.c.bodywidth - this.c.sidediff, this.c.bottomoffset);
+        body.seam(this.c.bodywidth, this.c.shoulder_offset, this.c.bodywidth - this.c.sidediff, this.c.bottomoffset);
         body.seam(this.c.bodywidth - this.c.sidediff, this.c.bottomoffset, this.c.bodywidth - this.c.sidediff, this.c.bodylength);
         
         
-        body.path(`M${this.c.center} ${this.c.shoulder - this.c.collaroffset}L${this.c.center} ${this.c.bodylength}`);
-        body.seam(this.c.center - this.c.collaroffset, this.c.shoulder, this.c.center - this.c.collaroffset, this.c.bodylength);
-        body.seam(this.c.center + this.c.collaroffset, this.c.shoulder, this.c.center + this.c.collaroffset, this.c.bodylength);
-        body.path(`M${this.c.center - this.c.collaroffset} ${this.c.shoulder}A${this.c.collaroffset} ${this.c.collaroffset} 0 0 1 ${this.c.center + this.c.collaroffset} ${this.c.shoulder}`).attr({'stroke-dasharray': "."});
+        body.path(`M${this.c.center} ${this.c.shoulder_offset - this.c.collaroffset}L${this.c.center} ${this.c.bodylength}`);
+        body.seam(this.c.center - this.c.collaroffset, this.c.shoulder_offset, this.c.center - this.c.collaroffset, this.c.bodylength);
+        body.seam(this.c.center + this.c.collaroffset, this.c.shoulder_offset, this.c.center + this.c.collaroffset, this.c.bodylength);
+        body.path(`M${this.c.center - this.c.collaroffset} ${this.c.shoulder_offset}A${this.c.collaroffset} ${this.c.collaroffset} 0 0 1 ${this.c.center + this.c.collaroffset} ${this.c.shoulder_offset}`).attr({'stroke-dasharray': "."});
         body.hm_line(this.c.center - this.c.collaroffset, this.c.center + this.c.collaroffset, this.c.bodylength * .75, this.scale, this.c.collaroffset * 2);
         body.vm_line(this.c.bodywidth / 4, this.c.bottomoffset, this.c.bottomoffset + this.c.foldoffset, this.scale, this.c.foldoffset);
-        body.vm_line(this.c.bodywidth / 4, this.c.shoulder, this.c.bottomoffset, this.scale,  this.m.shoulder_navel * this.scale);
-        body.vm_line(this.c.bodywidth * .75, this.c.shoulder, this.c.bodylength, this.scale,  this.c.shoulder);
+        body.vm_line(this.c.bodywidth / 4, this.c.shoulder_offset, this.c.bottomoffset, this.scale,  this.m.shoulder_navel * this.scale);
+        body.vm_line(this.c.bodywidth * .75, this.c.shoulder_offset, this.c.bodylength, this.scale,  this.c.shoulder_offset);
         body.hm_line(0, this.c.sidediff, this.c.bodylength * 0.75, this.scale, this.c.sidediff);
         
         var collar = Raphael("collar", this.c.collarwidth, this.c.collarlength);

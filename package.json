@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "@types/raphael": "^2.3.9",
-    "raphael": "^2.3.0"
+    "raphael": "^2.3.0",
+    "zod": "^3.22.4"
   }
 }
