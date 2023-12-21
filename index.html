@@ -2,6 +2,11 @@
 <head>
 <script type="module" src="/src/main.ts"></script>
 <style>
+body {
+  font-family: 'Iowan Old Style', 'Palatino Linotype', 'URW Palladio L', P052, serif;
+font-weight: normal;
+margin: 0 10em 0 10em;
+}
 span {
   display:inline-block;
   float: left;
@@ -33,10 +38,26 @@ span {
   font-size: smaller;
   padding-left: 0.5rem;
 }
+
+summary {
+  font-weight: bold;
+  font-size:larger;
+}
 </style>
+<title>Kimono Pattern Generator</title>
 </head>
 <body>
+<h1>Kimono Pattern Generator</h1>
+<details><summary>How to Measure</summary>
+<p>Most of the measurements should be fairly self-explanatory, with two main exceptions - shoulder and sleeve length.
+Most western garments put the shoulder seam right around the shoulder joint and end the sleeves at the wrist, making the shoulder measurement the distance between the two shoulder joints, and the sleeve length the distance from shoulder to wrist.</p>
 
+<p>This is not true of kimono. For a women's kimono, the shoulder seam sits halfway between the shoulder joint and the elbow, and the shoulder measurement is the distance between this point on one side of the body to the same point on the other side. The sleeve ends at the wrist, so sleeve length is the distance from theat shoulder seam point to the wrist.</p>
+
+<p>Men's kimono are cut slightly narrower, with shorter sleeves compared to women's. The shoulder seam is a third of the way down from the shoulder joint to the elbow, and the sleeves end two-thirds of the way down from the elbow to the wrist.</p>
+
+<p>Sleeve width is highly variable, and depends on what style of garment you're going for. Men's sleeves tend to be relatively short - about a third of the final body length (your neck-to-floor measurement). Women's sleeves will have more variety, ranging from around the same lenght as men's sleeves all the way down to nearly knee-length.</p>
+</details>
 <form id="form">
   <label for="fabric_width">Fabric width</label> <input type="number" name="fabric_width" id="fabric_width">
   <fieldset>
@@ -45,21 +66,21 @@ span {
     <label for="womens">Women's</label></label><input type="radio" name="style" id="womens" value="womens">
   </fieldset>
   <fieldset>
-    <legend>Kimono lining style</legend>
-    <label for="unlined">Unlined</label></label><input type="radio" name="lining" id="unlined" value="unlined" disabled checked>
-    <label for="lined">Lined</label></label><input type="radio" name="lining" id="lined" value="lined" disabled>
+    <legend>Measurement units</legend>
+    <label for="in">Inches</label></label><input type="radio" name="unit" id="in" value="in" checked>
+    <label for="cm">Centimeters</label></label><input type="radio" name="unit" id="cm" value="cm">
   </fieldset>
 <label for="shoulder">Shoulder width</label> <input type="number" name="shoulder" id="shoulder" value="26" />
 <label for="height">Height</label> <input type="number" name="height" id="height" value="58" />
 <label for="shoulder_navel">Shoulder to navel</label> <input type="number" name="shoulder_navel" id="shoulder_navel" value="19" />
 <label for="neck_circ">Neck Circumference</label> <input type="number" name="neck_circ" id="neck_circ" value="14" />
 <label for="hips">Hip Circumference</label> <input type="number" name="hips" id="hips" value="38" />
-<label for="sleeve">Sleeve width</label> <input type="number" name="sleeve" id="sleeve" value="10" />
+<label for="sleeve">Sleeve length</label> <input type="number" name="sleeve" id="sleeve" value="10" />
 <label for="neck_floor">Neck to floor distance</label> <input type="number" name="neck_floor" id="neck_floor" value="52" />
 <label for="shoulder_sternum">Shoulder to mid-sternum</label> <input type="number" name="shoulder_sternum" id="shoulder_sternum" value="6" />
 <label for="handspan">Width of spread hand</label> <input type="number" name="handspan" id="handspan" value="8" />
 <label for="palm">Width of palm</label> <input type="number" id="palm" name="palm" value="4" />
-<label for="sleeve_length">Sleeve length</label> <input type="number" id="sleeve_length" name="sleeve_length" value="30" />
+<label for="sleeve_length">Sleeve width</label> <input type="number" id="sleeve_length" name="sleeve_length" value="30" />
 <button name="submit" id="submit">Generate</button>
 </form>
 <div id="fabric" style="width:540px">

@@ -14,6 +14,20 @@ import { z } from "zod"
 //     handspan: number; // W
 // }
 
+const fabricWidthSchema = z.coerce.number().gt(13).lt(220).default(54);
+const StyleSchema = z.enum(['mens', 'womens']);
+const UnitSchema = z.enum(['in', 'cm']);
+export type StyleEnum = z.infer<typeof StyleSchema>;
+type UnitEnum = z.infer<typeof UnitSchema>;
+
+export const configSchema = z.object({
+    style: StyleSchema,
+    unit: UnitSchema,
+    fabric_width: fabricWidthSchema
+});
+
+export type Config = z.infer<typeof configSchema>;
+
 export const measurementsSchema = z.object({
     neck_circ: z.coerce.number().positive(), // C
     hips: z.coerce.number().positive(), // G
@@ -28,7 +42,6 @@ export const measurementsSchema = z.object({
     handspan: z.coerce.number().positive() // W
   }).required();
 
-export const fabricWidthSchema = z.coerce.number().gt(13).lt(120).default(54);
   
 export type Measurements = z.infer<typeof measurementsSchema>;
 
@@ -52,22 +65,41 @@ interface CalcMeasurements {
     bottomoffset: number;
 }
 
-// export interface KimonoPattern {
-//     meas: Measurements;
-//     calc: CalcMeasurements;
-//     construct(measure: Measurements): RaphaelElement[];
-//     calculate(scale: number): void;
-//     setScale(scale: number): void;
-// }
+type HardcodedMeasurements = {
+    fold: number;
+    sleeve: number;
+    collar: number;
+    radius: number;
+}
+
+export const hardcoded = {
+    in: {
+        scale: 10,
+        fold: 5,
+        sleeve: 0.5,
+        collar: 10,
+        radius: 3,
+    },
+    cm: {
+        scale: 5,
+        fold: 10,
+        sleeve: 1.5,
+        collar: 25,
+        radius: 7
+    }
+}
 
 export abstract class KimonoPattern {
     m: Measurements;
     c!: CalcMeasurements;
+    h: HardcodedMeasurements;
     scale: number;
 
-    constructor(measurements: Measurements)  {
+    constructor(measurements: Measurements, unit: UnitEnum)  {
+        let {scale, fold, sleeve, collar, radius} = hardcoded[unit];
         this.m = measurements;
-        this.scale = 10;
+        this.scale = scale;
+        this.h = {fold, sleeve, collar, radius};
         this.calculate();
     }
 

@@ -5,9 +5,9 @@ export class WomensKimono extends KimonoPattern {
     calculate() {
         const bodylength = 2 * (this.m.height ) * this.scale;
         const bodywidth = this.m.shoulder * this.scale;
-        const sleevelength = 2 * (this.m.sleeve_length  + 0.5 ) * this.scale;
+        const sleevelength = 2 * (this.m.sleeve_length  + this.h.sleeve ) * this.scale;
         const sleevewidth = this.m.sleeve  * this.scale;
-        const collarlength = (this.m.neck_floor + (this.m.neck_circ / 2) + 10)  * this.scale;
+        const collarlength = (this.m.neck_floor + (this.m.neck_circ / 2) + this.h.collar)  * this.scale;
         const collarwidth = this.m.handspan  * this.scale;
         const overlaplength = (this.m.height - this.m.shoulder_sternum)  * this.scale;
         const overlapwidth = ((this.m.shoulder / 3) - (this.m.neck_circ / 8))  * this.scale;
@@ -61,21 +61,21 @@ export class WomensKimono extends KimonoPattern {
         var sleeve_l = Raphael("left_sleeve", this.c.sleevewidth, this.c.sleevelength);
         sleeve_l.rect(0, 0, this.c.sleevewidth, this.c.sleevelength);
         sleeve_l.fold(0, this.c.sleevelength/2, this.c.sleevewidth, this.c.sleevelength/2);
-        sleeve_l.seam(this.scale * 3, this.scale * 0.5, this.c.sleevewidth, this.scale * 0.5);
-        sleeve_l.path(`M0 ${this.scale * 3.5} A${this.scale * 3} ${this.scale * 3} 0 0 1 ${this.scale * 3} ${this.scale * 0.5}`).attr({'stroke-dasharray': "-"});
-        sleeve_l.seam(this.scale * 3, (this.c.sleevelength - this.scale * 0.5), this.c.sleevewidth, (this.c.sleevelength - this.scale * 0.5));
-        sleeve_l.path(`M0 ${this.c.sleevelength - (this.scale * 3.5)} A${this.scale * 3} ${this.scale * 3} 0 0 0 ${this.scale * 3} ${this.c.sleevelength - (this.scale * 0.5)}`).attr({'stroke-dasharray': "-"});
+        sleeve_l.seam(this.scale * this.h.radius, this.scale * this.h.sleeve, this.c.sleevewidth, this.scale * this.h.sleeve);
+        sleeve_l.path(`M0 ${this.scale * (this.h.radius + this.h.sleeve)} A${this.scale * this.h.radius} ${this.scale * this.h.radius} 0 0 1 ${this.scale * this.h.radius} ${this.scale * this.h.sleeve}`).attr({'stroke-dasharray': "-"});
+        sleeve_l.seam(this.scale * this.h.radius, (this.c.sleevelength - this.scale * this.h.sleeve), this.c.sleevewidth, (this.c.sleevelength - this.scale * this.h.sleeve));
+        sleeve_l.path(`M0 ${this.c.sleevelength - (this.scale * (this.h.radius + this.h.sleeve))} A${this.scale * this.h.radius} ${this.scale * this.h.radius} 0 0 0 ${this.scale * this.h.radius} ${this.c.sleevelength - (this.scale * this.h.sleeve)}`).attr({'stroke-dasharray': "-"});
         sleeve_l.measure(this.c.sleevewidth/2, this.c.sleevelength - this.scale, this.c.sleevewidth, this.scale, false);
         sleeve_l.vm_line(this.c.sleevewidth/4, 0, this.c.sleevelength, this.scale, this.c.sleevelength);
-        sleeve_l.vm_line(this.c.sleevewidth/2, 0.5 * this.scale, this.c.sleevelength/2, this.scale, this.m.sleeve_length * this.scale);
+        sleeve_l.vm_line(this.c.sleevewidth/2, this.h.sleeve * this.scale, this.c.sleevelength/2, this.scale, this.m.sleeve_length * this.scale);
         
         var sleeve_r = Raphael("right_sleeve", this.c.sleevewidth, this.c.sleevelength);
         sleeve_r.rect(0, 0, this.c.sleevewidth, this.c.sleevelength);
         sleeve_r.fold(0, this.c.sleevelength/2, this.c.sleevewidth, this.c.sleevelength/2);
-        sleeve_r.seam(0, this.scale * 0.5, this.c.sleevewidth - this.scale * 3, this.scale * 0.5);
-        sleeve_r.path(`M${this.c.sleevewidth} ${this.scale * 3.5} A${this.scale * 3} ${this.scale * 3} 0 0 0 ${this.c.sleevewidth - this.scale * 3} ${this.scale * 0.5}`).attr({'stroke-dasharray': "-"});
-        sleeve_r.seam(0, (this.c.sleevelength - this.scale * 0.5), this.c.sleevewidth - this.scale * 3, (this.c.sleevelength - this.scale * 0.5));
-        sleeve_r.path(`M${this.c.sleevewidth} ${this.c.sleevelength - (this.scale * 3.5)} A${this.scale * 3} ${this.scale * 3} 0 0 1 ${this.c.sleevewidth - this.scale * 3} ${this.c.sleevelength - (this.scale * 0.5)}`).attr({'stroke-dasharray': "-"});
+        sleeve_r.seam(0, this.scale * this.h.sleeve, this.c.sleevewidth - this.scale * this.h.radius, this.scale * this.h.sleeve);
+        sleeve_r.path(`M${this.c.sleevewidth} ${this.scale * (this.h.radius + this.h.sleeve)} A${this.scale * this.h.radius} ${this.scale * this.h.radius} 0 0 0 ${this.c.sleevewidth - this.scale * this.h.radius} ${this.scale * this.h.sleeve}`).attr({'stroke-dasharray': "-"});
+        sleeve_r.seam(0, (this.c.sleevelength - this.scale * this.h.sleeve), this.c.sleevewidth - this.scale * this.h.radius, (this.c.sleevelength - this.scale * this.h.sleeve));
+        sleeve_r.path(`M${this.c.sleevewidth} ${this.c.sleevelength - (this.scale * (this.h.radius + this.h.sleeve))} A${this.scale * this.h.radius} ${this.scale * this.h.radius} 0 0 1 ${this.c.sleevewidth - this.scale * this.h.radius} ${this.c.sleevelength - (this.scale * this.h.sleeve)}`).attr({'stroke-dasharray': "-"});
         sleeve_r.measure(this.c.sleevewidth/2, this.c.sleevelength - this.scale, this.c.sleevewidth, this.scale, false);
         sleeve_r.vm_line(this.c.sleevewidth/2, 0.5 * this.scale, this.c.sleevelength/2, this.scale, this.m.sleeve_length * this.scale);
         sleeve_r.vm_line(this.c.sleevewidth/4, 0, this.c.sleevelength, this.scale, this.c.sleevelength);

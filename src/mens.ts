@@ -3,11 +3,11 @@ import Raphael from 'raphael';
 
 export class MensKimono extends KimonoPattern {
     calculate() {
-        const bodylength = 2 * (this.m.neck_floor + 5) * this.scale;
+        const bodylength = 2 * (this.m.neck_floor + this.h.fold) * this.scale;
         const bodywidth = this.m.shoulder * this.scale;
         const sleevelength = 2 * (this.m.sleeve_length)  * this.scale;
         const sleevewidth = this.m.sleeve  * this.scale;
-        const collarlength = (this.m.neck_floor + (this.m.neck_circ / 2) + 10)  * this.scale;
+        const collarlength = (this.m.neck_floor + (this.m.neck_circ / 2) + this.h.collar)  * this.scale;
         const collarwidth = this.m.handspan  * this.scale;
         const overlaplength = (this.m.neck_floor - this.m.shoulder_sternum)  * this.scale;
         const overlapwidth = ((this.m.hips / 6) + (this.m.neck_circ / 12))  * this.scale;
@@ -15,11 +15,11 @@ export class MensKimono extends KimonoPattern {
 
         const bottom = ((this.m.hips / 2) + (this.m.neck_circ / 4)) * this.scale;
         const sidediff = (bodywidth - bottom) / 2;
-        const sidelength = ((this.m.neck_floor - this.m.shoulder_navel) + 5) * this.scale;
+        const sidelength = ((this.m.neck_floor - this.m.shoulder_navel) + this.h.fold) * this.scale;
         const shoulder_offset = bodylength / 2;
         const center = bodywidth / 2;
         const collaroffset = (this.m.neck_circ / 4)  * this.scale;
-        const foldoffset = 5 * this.scale;
+        const foldoffset = this.h.fold * this.scale;
         const bottomoffset = shoulder_offset + (this.m.shoulder_navel * this.scale);
 
         this.c = {

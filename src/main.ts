@@ -1,10 +1,10 @@
-import Raphael from 'raphael';
 import { MensKimono } from './mens';
 import { WomensKimono } from './womens';
-import { measurementsSchema, fabricWidthSchema } from './types';
+import { measurementsSchema, configSchema, hardcoded } from './types';
 import { ZodError } from 'zod';
+import Raphael from 'raphael';
 
-  declare module "raphael" {
+declare module "raphael" {
     interface RaphaelPaper {
       label(x: number, y: number, t: string, rotate: boolean): RaphaelSet;
       measure(x: number, y: number, v: number, scale: number, rotate: boolean): RaphaelSet;
@@ -32,7 +32,8 @@ import { ZodError } from 'zod';
     } else if (0.875 < rem) {
       rnd = 1;
     }
-    var tmp_v = (whole + rnd).toString() + '"';
+    const unit_str = scale == hardcoded.in.scale ? '"' : 'cm';
+    var tmp_v = (whole + rnd).toString() + unit_str;
     return this.label(x, y, tmp_v, rotate);
   }
   
@@ -81,32 +82,33 @@ import { ZodError } from 'zod';
   }
   
 
+
 window.onload = function () {
   const form = document.getElementById('form');
   if (form) {
     form.addEventListener("submit", generate);
   }
 
-  const width = document.getElementById('fabric_width');
-  if (width) {
-    width.addEventListener("change", resizeFabric);
-  }
+  // const width = document.getElementById('fabric_width');
+  // if (width) {
+  //   width.addEventListener("change", resizeFabric);
+  // }
 
 }
 
-function resizeFabric(e: Event): void {
-  e.preventDefault();
-  e.stopPropagation();
-  const fabric_width = document.getElementById('fabric_width') as HTMLInputElement;
-  const width = fabricWidthSchema.parse(fabric_width?.value);
-  fabric_width.value = `${width}`; // in case we're using the default
-  //let clearfix = document.getElementsByClassName('clearfix');
-  let fabric = document.getElementById('fabric');
-  if (fabric) {
-    fabric.style.width = `${ width * 10 }px`
-  }
+// function resizeFabric(e: Event): void {
+//   e.preventDefault();
+//   e.stopPropagation();
+//   const fabric_width = document.getElementById('fabric_width') as HTMLInputElement;
+//   const width = fabricWidthSchema.parse(fabric_width?.value);
+//   fabric_width.value = `${width}`; // in case we're using the default
+//   //let clearfix = document.getElementsByClassName('clearfix');
+//   let fabric = document.getElementById('fabric');
+//   if (fabric) {
+//     fabric.style.width = `${ width * 10 }px`
+//   }
 
-}
+// }
 
 function generate(e: Event): void {
   e.preventDefault();
@@ -115,19 +117,24 @@ function generate(e: Event): void {
     const form = new FormData(document.getElementById('form') as HTMLFormElement);
     const obj = Object.fromEntries(form.entries());
     const measurements = measurementsSchema.parse(obj);
+    const config = configSchema.parse(obj);
     const erorrs = document.querySelectorAll('.error');
     erorrs.forEach( el => { el.classList.remove('error');});
     const svgs = document.querySelectorAll('svg');
     svgs.forEach( el => {el.remove();});
 
     let kimono;
-    if (form.get('style') == 'womens') {
-      kimono = new WomensKimono(measurements);
+    if (config.style == 'womens') {
+      kimono = new WomensKimono(measurements, config.unit);
     } else {
-      kimono = new MensKimono(measurements);
+      kimono = new MensKimono(measurements, config.unit);
+    }
+
+    let fabric = document.getElementById('fabric');
+    if (fabric) {
+      fabric.style.width = `${ config.fabric_width * hardcoded[config.unit].scale }px`
     }
   
-    // kimono.setScale(10);
     kimono.construct();
   } catch (error) {
     if (error instanceof ZodError) {
