@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg:svg
+   id="svg923"
+   sodipodi:docname="nicubunu-Male-body-silhouette-front.svg"
+   viewBox="0 0 450 450"
+   sodipodi:version="0.32"
+   version="1.0"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <svg:defs
+     id="defs1957">
+    <svg:rect
+       x="254.18594"
+       y="13.009384"
+       width="156.73953"
+       height="77.860641"
+       id="rect67929" />
+    <svg:rect
+       x="12.860809"
+       y="24.721008"
+       width="172.25815"
+       height="67.643505"
+       id="rect35321" />
+    <svg:rect
+       x="441.86136"
+       y="239.19989"
+       width="210.44931"
+       height="88.94931"
+       id="rect24103" />
+    <svg:rect
+       x="369.55875"
+       y="188.84103"
+       width="173.31882"
+       height="103.57547"
+       id="rect3573" />
+    <svg:marker
+       style="overflow:visible;"
+       id="Arrow2Mend"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Mend"
+       inkscape:isstock="true">
+      <svg:path
+         transform="scale(0.6) rotate(180) translate(0,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="stroke:context-stroke;fill-rule:evenodd;fill:context-stroke;stroke-width:0.62500000;stroke-linejoin:round;"
+         id="path1107" />
+    </svg:marker>
+    <svg:marker
+       style="overflow:visible"
+       id="marker11555"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Mstart"
+       inkscape:isstock="true">
+      <svg:path
+         transform="scale(0.6) translate(0,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="stroke:context-stroke;fill-rule:evenodd;fill:context-stroke;stroke-width:0.62500000;stroke-linejoin:round"
+         id="path11553" />
+    </svg:marker>
+    <svg:marker
+       style="overflow:visible"
+       id="Arrow2Sstart"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Sstart"
+       inkscape:isstock="true">
+      <svg:path
+         transform="scale(0.3) translate(-2.3,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="stroke:context-stroke;fill-rule:evenodd;fill:context-stroke;stroke-width:0.62500000;stroke-linejoin:round"
+         id="path1110" />
+    </svg:marker>
+    <svg:marker
+       style="overflow:visible"
+       id="marker11537"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Mstart"
+       inkscape:isstock="true">
+      <svg:path
+         transform="scale(0.6) translate(0,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="stroke:context-stroke;fill-rule:evenodd;fill:context-stroke;stroke-width:0.62500000;stroke-linejoin:round"
+         id="path11535" />
+    </svg:marker>
+    <svg:marker
+       style="overflow:visible"
+       id="Arrow2Mstart"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Mstart"
+       inkscape:isstock="true">
+      <svg:path
+         transform="scale(0.6) translate(0,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="stroke:context-stroke;fill-rule:evenodd;fill:context-stroke;stroke-width:0.62500000;stroke-linejoin:round"
+         id="path1104" />
+    </svg:marker>
+    <svg:marker
+       style="overflow:visible"
+       id="Arrow1Sstart"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Sstart"
+       inkscape:isstock="true">
+      <svg:path
+         transform="scale(0.2) translate(6,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path1092" />
+    </svg:marker>
+    <svg:marker
+       style="overflow:visible;"
+       id="Arrow1Mend"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <svg:path
+         transform="scale(0.4) rotate(180) translate(10,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt;"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path1089" />
+    </svg:marker>
+    <svg:marker
+       style="overflow:visible"
+       id="Arrow1Mstart"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mstart"
+       inkscape:isstock="true">
+      <svg:path
+         transform="scale(0.4) translate(10,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path1086" />
+    </svg:marker>
+    <svg:marker
+       style="overflow:visible"
+       id="marker11493"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lstart"
+       inkscape:isstock="true">
+      <svg:path
+         transform="scale(1.1) translate(1,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="stroke:context-stroke;fill-rule:evenodd;fill:context-stroke;stroke-width:0.62500000;stroke-linejoin:round"
+         id="path11491" />
+    </svg:marker>
+    <svg:marker
+       style="overflow:visible;"
+       id="marker11481"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lend"
+       inkscape:isstock="true">
+      <svg:path
+         transform="scale(1.1) rotate(180) translate(1,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="stroke:context-stroke;fill-rule:evenodd;fill:context-stroke;stroke-width:0.62500000;stroke-linejoin:round;"
+         id="path11479" />
+    </svg:marker>
+    <svg:marker
+       style="overflow:visible"
+       id="Arrow2Lstart"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lstart"
+       inkscape:isstock="true">
+      <svg:path
+         transform="scale(1.1) translate(1,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="stroke:context-stroke;fill-rule:evenodd;fill:context-stroke;stroke-width:0.62500000;stroke-linejoin:round"
+         id="path1098" />
+    </svg:marker>
+    <svg:marker
+       style="overflow:visible;"
+       id="Arrow2Lend"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lend"
+       inkscape:isstock="true">
+      <svg:path
+         transform="scale(1.1) rotate(180) translate(1,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="stroke:context-stroke;fill-rule:evenodd;fill:context-stroke;stroke-width:0.62500000;stroke-linejoin:round;"
+         id="path1101" />
+    </svg:marker>
+    <svg:marker
+       style="overflow:visible"
+       id="Arrow1Lstart"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lstart"
+       inkscape:isstock="true">
+      <svg:path
+         transform="scale(0.8) translate(12.5,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path1080" />
+    </svg:marker>
+    <svg:rect
+       x="12.860809"
+       y="24.721008"
+       width="172.25815"
+       height="67.643501"
+       id="rect35321-9" />
+    <svg:rect
+       x="12.860809"
+       y="24.721008"
+       width="172.25815"
+       height="67.643501"
+       id="rect35321-7" />
+    <svg:rect
+       x="12.860809"
+       y="24.721008"
+       width="172.25815"
+       height="67.643501"
+       id="rect35321-9-2" />
+    <svg:rect
+       x="254.18594"
+       y="13.009384"
+       width="156.73953"
+       height="77.860641"
+       id="rect67929-1" />
+    <svg:rect
+       x="12.860809"
+       y="24.721008"
+       width="172.25815"
+       height="67.643501"
+       id="rect35321-9-2-4" />
+    <svg:rect
+       x="12.860809"
+       y="24.721008"
+       width="172.25815"
+       height="67.643501"
+       id="rect35321-7-6" />
+    <svg:rect
+       x="254.18594"
+       y="13.009384"
+       width="201.16424"
+       height="73.803054"
+       id="rect67929-1-2" />
+    <svg:rect
+       x="254.18594"
+       y="13.009384"
+       width="228.50116"
+       height="68.462692"
+       id="rect67929-1-2-3" />
+    <svg:rect
+       x="254.18594"
+       y="13.009384"
+       width="201.16425"
+       height="73.803055"
+       id="rect67929-1-2-7" />
+    <svg:rect
+       x="254.18594"
+       y="13.009384"
+       width="228.50116"
+       height="68.462692"
+       id="rect67929-1-2-3-1" />
+  </svg:defs>
+  <sodipodi:namedview
+     id="base"
+     bordercolor="#666666"
+     inkscape:pageshadow="2"
+     inkscape:window-y="28"
+     pagecolor="#ffffff"
+     inkscape:window-height="996"
+     inkscape:zoom="2"
+     inkscape:window-x="0"
+     showgrid="false"
+     borderopacity="1.0"
+     inkscape:current-layer="svg923"
+     inkscape:cx="183.25"
+     inkscape:cy="40.75"
+     inkscape:window-width="1920"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:snap-global="false"
+     inkscape:window-maximized="1" />
+  <svg:path
+     id="path943"
+     sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccc"
+     style="fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-linejoin:round"
+     d="m 222.544,46.312 c 2.879,5.759 1.241,10.697 0.521,16.455 -7.475,6.998 -31.078,3.504 -34.891,9.753 -7.947,12.037 -32.768,47.87 -33.012,58.78 0.292,9.58 20.009,44.25 31.403,56.01 2.711,0.6 7.019,1.03 8.741,-0.39 0.898,-4.93 1.165,-8.9 2.209,-12.63 -1.445,-0.85 -3.172,-0.19 -5.263,-0.06 -5.79,-7.04 -11.969,-33.65 -13.056,-40.28 5.266,-9.52 8.786,-21.77 17.701,-35.794 2.478,18.584 7.906,47.884 5.562,58.894 -19.574,42.67 3.037,130.68 3.622,146.86 -6.45,30.65 9.279,90.59 9.678,96.15 -0.428,5.14 -3.491,8.94 -1.545,12.12 -2.603,11.04 -4.497,15.03 -2.337,21.51 2.159,6.48 17.766,8.09 20.767,4.1 0.934,-6.07 -0.608,-21.38 -2.767,-24.26 1.148,-2.46 2.541,-11.11 0.197,-18.52 -2.757,-9.48 5.825,-63.07 -0.775,-78.04 0.841,-3.4 2.173,-14.49 2.187,-19.44 -0.804,-2.97 0.48,-35.1 2,-60.19 1.527,25.12 2.807,57.43 2,60.41 -2.879,2.88 0.518,18.51 2.6,21.5 -2.052,6.29 3.223,66.5 7.494,73.5 -2.34,7.41 0.29,14.82 1.44,17.28 -2.16,2.88 -4.53,19.84 -3.6,25.91 3,4 19.44,0.73 21.6,-5.75 2.16,-6.48 -0.98,-8.4 -3.58,-19.44 1.94,-3.19 -0.74,-10.7 -1.17,-15.84 0.4,-5.56 8.72,-58.48 2.27,-89.96 -1.06,-14.53 25.84,-107.34 3.9,-147.96 0.91,-12.1 -0.43,-42.54 2.15,-60.036 -0.72,6.476 2.52,48.076 7.21,60.426 -3.17,15.23 1.75,57.89 -1.13,62.21 -1.23,5.14 -1.41,13.64 -1.95,20.15 3.6,-2.16 3.05,-4.59 5.24,-3.18 2.6,5.13 -5.81,10.99 -5.84,15.54 5.75,0 16.48,-7.22 12.34,-31.38 -0.02,-9.69 15.98,-62.05 8.29,-75.02 2.65,-8.42 -3.77,-60.692 -8.82,-71.075 -3.81,-6.249 -28,-3.814 -35.47,-10.813 -0.72,-5.758 -3.6,-11.522 -0.72,-17.281 6.47,-9.357 6.71,-40.116 -11.316,-40.281 -23.263,0.0131 -20.359,30.705 -13.88,40.062 z" />
+  <svg:metadata
+     id="metadata1954">
+    <rdf:RDF>
+      <cc:Work>
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <cc:license
+           rdf:resource="http://creativecommons.org/publicdomain/zero/1.0/" />
+        <dc:publisher>
+          <cc:Agent
+             rdf:about="http://openclipart.org/">
+            <dc:title>Openclipart</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:title>Male body silhouette - front</dc:title>
+        <dc:date>2008-02-20T14:55:22</dc:date>
+        <dc:description>Front view of a male body silhouette</dc:description>
+        <dc:source>https://openclipart.org/detail/14574/male-body-silhouette---front-by-nicubunu</dc:source>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>nicubunu</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>body</rdf:li>
+            <rdf:li>contour</rdf:li>
+            <rdf:li>outline</rdf:li>
+            <rdf:li>people</rdf:li>
+            <rdf:li>silhouette</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/publicdomain/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </svg:metadata>
+  <script />
+  <svg:g
+     id="g9869"
+     transform="translate(0.90781479,-11.066562)">
+    <svg:path
+       style="fill:none;stroke:#b3b3b3;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 201.76205,88.517787 c -1.50802,18.548683 5.20667,52.522063 7.61554,61.282433 7.49812,-1.7437 17.05906,-17.73288 24.1552,-30.99026 7.71404,12.16227 15.86774,23.24468 23.90069,30.96548 9.3217,-14.95383 6.71742,-43.0765 6.66009,-62.867916"
+       id="path3382"
+       sodipodi:nodetypes="ccccc" />
+    <svg:path
+       style="fill:#b3b3b3;stroke:#b3b3b3;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 229.88731,94.068802 c -0.90472,8.017238 2.20339,24.733708 3.64548,24.741158 1.64908,0.009 2.92835,-16.5096 2.54665,-24.178498 -0.24919,-5.006478 -5.66838,-5.203927 -6.19213,-0.56266 z"
+       id="path4827"
+       sodipodi:nodetypes="ssss" />
+  </svg:g>
+  <svg:path
+     style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:1,3;stroke-dashoffset:0"
+     d="M 68.854296,67.527457 H 374.18516"
+     id="path10017" />
+  <svg:path
+     style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1, 3;stroke-dashoffset:0;stroke-opacity:1"
+     d="M 66.755513,6.0473407 H 372.08638"
+     id="path10017-5" />
+  <svg:path
+     style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1, 3;stroke-dashoffset:0;stroke-opacity:1"
+     d="M 89.559987,418.87987 H 394.89085"
+     id="path10017-6" />
+  <svg:ellipse
+     style="opacity:1;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.746444"
+     id="path10244"
+     cx="234.31792"
+     cy="156.74146"
+     rx="1.7570338"
+     ry="1.8135166" />
+  <svg:path
+     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow2Lstart);marker-end:url(#marker11481)"
+     d="M 358.46328,6.5931104 V 418.23353"
+     id="path11469" />
+  <svg:path
+     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#marker11493);marker-end:url(#marker11481)"
+     d="M 324.63868,67.290204 V 418.04005"
+     id="path11489" />
+  <svg:path
+     style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#marker11555);marker-end:url(#Arrow2Mend);stroke-miterlimit:3.9;stroke-dasharray:none"
+     d="M 235.50375,67.665028 V 92.965119"
+     id="path11501" />
+  <svg:path
+     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#marker11555);marker-end:url(#Arrow2Mend)"
+     d="M 253.95351,67.519476 V 156.18607"
+     id="path11571" />
+  <svg:path
+     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#marker11555);marker-end:url(#Arrow2Mend)"
+     d="m 229.75225,56.700737 c -39.36481,-5.876901 51.48924,-7.157134 11.3541,0.151718"
+     id="path11686"
+     sodipodi:nodetypes="cc" />
+  <svg:path
+     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#marker11555);marker-end:url(#Arrow2Mend)"
+     d="m 231.00101,198.96544 c -143.224055,-16.96009 149.91824,-15.01683 10.5052,0.26665"
+     id="path12090"
+     sodipodi:nodetypes="cc" />
+  <svg:path
+     style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:1,2;stroke-dashoffset:0"
+     d="m 210.12177,156.42597 h 48.28012"
+     id="path12542" />
+  <svg:path
+     style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:1,2;stroke-dashoffset:0"
+     d="m 223.68963,94.580841 h 20.58182"
+     id="path12544" />
+  <svg:path
+     style="fill:#0000ff;stroke:#0000ff;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3,1;stroke-dashoffset:0;stroke-opacity:1"
+     d="M 156.40241,91.182534 190.87453,118.063"
+     id="path13172"
+     sodipodi:nodetypes="cc" />
+  <svg:path
+     style="fill:none;stroke:#800000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2,1;stroke-dashoffset:0;stroke-opacity:1"
+     d="m 164.55341,80.864997 31.59153,26.883423"
+     id="path13174"
+     sodipodi:nodetypes="cc" />
+  <svg:path
+     style="fill:none;stroke:#0000ff;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3,1;stroke-dashoffset:0;stroke-opacity:1"
+     d="m 268.09639,117.37877 42.12449,-8.46779"
+     id="path13178"
+     sodipodi:nodetypes="cc" />
+  <svg:path
+     style="fill:none;stroke:#800000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2,1;stroke-dashoffset:0;stroke-opacity:1"
+     d="m 268.07221,102.60777 35.34973,-7.614422"
+     id="path13180"
+     sodipodi:nodetypes="cc" />
+  <svg:path
+     style="fill:none;stroke:#0000ff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#marker11555);marker-end:url(#Arrow2Mend)"
+     d="m 163.88451,93.671471 c 0,0 11.07533,-26.555613 23.24273,-29.493473 46.08999,-11.128585 94.84426,-1.038655 98.63967,2.414108 8.22422,7.481736 13.92919,34.658784 15.5841,44.157584"
+     id="path13477"
+     sodipodi:nodetypes="cssc" />
+  <svg:path
+     style="fill:none;stroke:#800000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#marker11555);marker-end:url(#Arrow2Mend)"
+     d="m 172.84631,86.418358 c 0,0 7.70654,-15.213116 14.81653,-18.880055 35.66867,-8.403413 89.38792,-3.88936 99.10265,4.49696 2.67043,2.305272 6.34335,24.760986 6.34335,24.760986"
+     id="path14272"
+     sodipodi:nodetypes="ccsc" />
+  <svg:path
+     style="fill:none;stroke:#0000ff;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:3,1;stroke-dashoffset:0"
+     d="m 269.8103,216.31293 24.29735,5.31317"
+     id="path16128" />
+  <svg:path
+     style="fill:none;stroke:#800000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 1;stroke-dashoffset:0;stroke-opacity:1"
+     d="m 268.94421,196.93376 27.70362,2.76053"
+     id="path16130" />
+  <svg:path
+     style="fill:none;stroke:#800000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#marker11555);marker-end:url(#Arrow2Mend)"
+     d="m 293.86844,99.418915 c 6.97133,41.668415 4.20995,72.110985 -2.29028,98.241105"
+     id="path16374"
+     sodipodi:nodetypes="cc" />
+  <svg:path
+     style="fill:none;stroke:#0000ff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#marker11555);marker-end:url(#Arrow2Mend)"
+     d="m 302.86501,112.63461 c 3.0577,40.63499 -5.33062,71.87967 -9.76349,106.3694"
+     id="path16617"
+     sodipodi:nodetypes="cc" />
+  <svg:rect
+     style="opacity:0.6;fill:#ffffff;stroke:none;stroke-width:1.00827;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:3.0248, 1.00827;stroke-dashoffset:0;stroke-opacity:0.746444"
+     id="rect16905"
+     width="78.879662"
+     height="5.3012619"
+     x="195.4541"
+     y="185.94717" />
+  <svg:rect
+     style="opacity:0.6;fill:#ffffff;stroke:none;stroke-width:0.518291;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:1.55487, 0.518291;stroke-dashoffset:0;stroke-opacity:0.746444"
+     id="rect16905-2"
+     width="20.842915"
+     height="5.3012619"
+     x="224.91298"
+     y="48.439152" />
+  <svg:text
+     xml:space="preserve"
+     id="text3571"
+     style="font-size:40px;line-height:1.25;font-family:'Direkt Stencil';-inkscape-font-specification:'Direkt Stencil';letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect3573)"
+     transform="rotate(90.927036,310.05995,276.06677)"><svg:tspan
+       x="369.55859"
+       y="224.08012"
+       id="tspan81664"><svg:tspan
+         style="font-size:18.6667px;font-family:'Libre Baskerville';-inkscape-font-specification:'Libre Baskerville, Normal'"
+         id="tspan81662">height</svg:tspan></svg:tspan></svg:text>
+  <svg:text
+     xml:space="preserve"
+     id="text24101"
+     style="font-size:40px;line-height:1.25;font-family:'Direkt Stencil';-inkscape-font-specification:'Direkt Stencil';letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect24103)"
+     transform="rotate(90,393.68904,208.95897)"><svg:tspan
+       x="441.86133"
+       y="274.43754"
+       id="tspan81668"><svg:tspan
+         style="font-size:16px;font-family:'Libre Baskerville';-inkscape-font-specification:'Libre Baskerville, Normal'"
+         id="tspan81666">shoulder to floor</svg:tspan></svg:tspan></svg:text>
+  <svg:text
+     xml:space="preserve"
+     id="text35319"
+     style="font-size:40px;line-height:1.25;font-family:'Direkt Stencil';-inkscape-font-specification:'Direkt Stencil';letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect35321)"><svg:tspan
+       x="12.861328"
+       y="59.959025"
+       id="tspan81672"><svg:tspan
+         style="font-size:13.3333px;font-family:'Libre Baskerville';-inkscape-font-specification:'Libre Baskerville, Normal';fill:#0000ff"
+         id="tspan81670">shoulder width (women)</svg:tspan></svg:tspan></svg:text>
+  <svg:text
+     xml:space="preserve"
+     id="text35319-8-3"
+     style="font-size:40px;line-height:1.25;font-family:'Direkt Stencil';-inkscape-font-specification:'Direkt Stencil';letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect35321-7-6);fill:#0000ff;stroke:#ffffff"
+     transform="translate(282.29852,167.51888)"><svg:tspan
+       x="12.861328"
+       y="59.959025"
+       id="tspan81676"><svg:tspan
+         style="font-size:13.3333px;font-family:'Libre Baskerville';-inkscape-font-specification:'Libre Baskerville, Normal'"
+         id="tspan81674">sleeve length (women)</svg:tspan></svg:tspan></svg:text>
+  <svg:text
+     xml:space="preserve"
+     id="text35319-8"
+     style="font-size:40px;line-height:1.25;font-family:'Direkt Stencil';-inkscape-font-specification:'Direkt Stencil';letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect35321-7);stroke:none;fill:#0000ff"
+     transform="translate(282.27852,167.50829)"><svg:tspan
+       x="12.861328"
+       y="59.959025"
+       id="tspan81680"><svg:tspan
+         style="font-size:13.3333px;font-family:'Libre Baskerville';-inkscape-font-specification:'Libre Baskerville, Normal'"
+         id="tspan81678">sleeve length (women)</svg:tspan></svg:tspan></svg:text>
+  <svg:text
+     xml:space="preserve"
+     id="text35319-2"
+     style="font-size:40px;line-height:1.25;font-family:'Direkt Stencil';-inkscape-font-specification:'Direkt Stencil';letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect35321-9)"
+     transform="translate(10.231551,21.522464)"><svg:tspan
+       x="12.861328"
+       y="59.959025"
+       id="tspan81684"><svg:tspan
+         style="font-size:13.3333px;font-family:'Libre Baskerville';-inkscape-font-specification:'Libre Baskerville, Normal';fill:#800000"
+         id="tspan81682">shoulder width (men)</svg:tspan></svg:tspan></svg:text>
+  <svg:text
+     xml:space="preserve"
+     id="text35319-2-7-6"
+     style="font-size:40px;line-height:1.25;font-family:'Direkt Stencil';-inkscape-font-specification:'Direkt Stencil';letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect35321-9-2-4);stroke:#ffffff"
+     transform="translate(288.50377,134.18088)"><svg:tspan
+       x="12.861328"
+       y="59.959025"
+       id="tspan81688"><svg:tspan
+         style="font-size:13.3333px;font-family:'Libre Baskerville';-inkscape-font-specification:'Libre Baskerville, Normal';fill:#800000"
+         id="tspan81686">sleeve length (men)</svg:tspan></svg:tspan></svg:text>
+  <svg:text
+     xml:space="preserve"
+     id="text35319-2-7"
+     style="font-size:40px;line-height:1.25;font-family:'Direkt Stencil';-inkscape-font-specification:'Direkt Stencil';letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect35321-9-2)"
+     transform="translate(288.54685,134.23093)"><svg:tspan
+       x="12.861328"
+       y="59.959025"
+       id="tspan81692"><svg:tspan
+         style="font-size:13.3333px;font-family:'Libre Baskerville';-inkscape-font-specification:'Libre Baskerville, Normal';fill:#800000"
+         id="tspan81690">sleeve length (men)</svg:tspan></svg:tspan></svg:text>
+  <svg:text
+     xml:space="preserve"
+     id="text67927"
+     style="font-size:40px;line-height:1.25;font-family:'Direkt Stencil';-inkscape-font-specification:'Direkt Stencil';letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect67929)"
+     transform="translate(3.9654846,8.2513123)"><svg:tspan
+       x="254.18555"
+       y="48.248088"
+       id="tspan81696"><svg:tspan
+         style="font-size:16px;font-family:'Libre Baskerville';-inkscape-font-specification:'Libre Baskerville, Normal'"
+         id="tspan81694">neck</svg:tspan></svg:tspan></svg:text>
+  <svg:text
+     xml:space="preserve"
+     id="text67927-8"
+     style="font-size:40px;line-height:1.25;font-family:'Direkt Stencil';-inkscape-font-specification:'Direkt Stencil';letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect67929-1)"
+     transform="translate(-218.26712,157.72008)"><svg:tspan
+       x="254.18555"
+       y="48.248088"
+       id="tspan81700"><svg:tspan
+         style="font-size:16px;font-family:'Libre Baskerville';-inkscape-font-specification:'Libre Baskerville, Normal'"
+         id="tspan81698">hip circumference</svg:tspan></svg:tspan></svg:text>
+  <svg:text
+     xml:space="preserve"
+     id="text67927-8-1-8"
+     style="font-size:40px;line-height:1.25;font-family:'Direkt Stencil';-inkscape-font-specification:'Direkt Stencil';letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect67929-1-2-7);stroke:#ffffff"
+     transform="translate(-187.13345,121.93406)"><svg:tspan
+       x="254.18555"
+       y="48.248088"
+       id="tspan81704"><svg:tspan
+         style="font-size:16px;font-family:'Libre Baskerville';-inkscape-font-specification:'Libre Baskerville, Normal'"
+         id="tspan81702">shoulder to bellybutton</svg:tspan></svg:tspan></svg:text>
+  <svg:text
+     xml:space="preserve"
+     id="text67927-8-1"
+     style="font-size:40px;line-height:1.25;font-family:'Direkt Stencil';-inkscape-font-specification:'Direkt Stencil';letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect67929-1-2)"
+     transform="translate(-187.12304,121.93296)"><svg:tspan
+       x="254.18555"
+       y="48.248088"
+       id="tspan81708"><svg:tspan
+         style="font-size:16px;font-family:'Libre Baskerville';-inkscape-font-specification:'Libre Baskerville, Normal'"
+         id="tspan81706">shoulder to bellybutton</svg:tspan></svg:tspan></svg:text>
+  <svg:text
+     xml:space="preserve"
+     id="text67927-8-1-7-3"
+     style="font-size:40px;line-height:1.25;font-family:'Direkt Stencil';-inkscape-font-specification:'Direkt Stencil';letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect67929-1-2-3-1);stroke:#ffffff"
+     transform="translate(-229.50972,78.768565)"><svg:tspan
+       x="254.18555"
+       y="48.248088"
+       id="tspan81712"><svg:tspan
+         style="font-size:16px;font-family:'Libre Baskerville';-inkscape-font-specification:'Libre Baskerville, Normal'"
+         id="tspan81710">shoulder to mid-sternum</svg:tspan></svg:tspan></svg:text>
+  <svg:text
+     xml:space="preserve"
+     id="text67927-8-1-7"
+     style="font-size:40px;line-height:1.25;font-family:'Direkt Stencil';-inkscape-font-specification:'Direkt Stencil';letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect67929-1-2-3)"
+     transform="translate(-229.52572,78.789177)"><svg:tspan
+       x="254.18555"
+       y="48.248088"
+       id="tspan81716"><svg:tspan
+         style="font-size:16px;font-family:'Libre Baskerville';-inkscape-font-specification:'Libre Baskerville, Normal'"
+         id="tspan81714">shoulder to mid-sternum</svg:tspan></svg:tspan></svg:text>
+  <svg:path
+     style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1, 1;stroke-dashoffset:0;stroke-opacity:1"
+     d="M 235.35146,94.908646 224.79852,116.40913"
+     id="path81261"
+     sodipodi:nodetypes="cc" />
+</svg:svg>

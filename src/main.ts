@@ -136,6 +136,32 @@ function generate(e: Event): void {
     }
   
     kimono.construct();
+    const height = fabric?.clientHeight;
+    const length_display = document.getElementById('length');
+    if (height && length_display) {
+      const length = height / hardcoded[config.unit].scale;
+      let output = '';
+      if (config.unit === 'in') {
+        const yds = length / 36;
+        const eighths = Math.ceil((length % 36) / 4.5);
+        let fractional = '';
+        if (eighths == 2 || eighths == 6) {
+          const fourths = eighths/2
+          fractional = `&frac${fourths}4;`;
+        } else if (eighths == 4) {
+          fractional = `&frac${1}2;`;
+        } else {
+          fractional = `&frac${eighths}8;`;
+        }
+        output = `${length}" (${yds} yds) ≈ ${(Math.floor(yds))} ${fractional}`
+      } else {
+        output = `${length}cm (${(length / 100)}m)`
+      }
+
+      length_display.innerHTML = output;
+    }
+
+
   } catch (error) {
     if (error instanceof ZodError) {
       error.issues.forEach(error => {
