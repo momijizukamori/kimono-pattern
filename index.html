@@ -1,113 +1,80 @@
 <html>
+
 <head>
-<script type="module" src="/src/main.ts"></script>
-<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-<style>
-body {
-  font-family: 'Iowan Old Style', 'Palatino Linotype', 'URW Palladio L', P052, serif;
-font-weight: normal;
-margin: 0 10em 0 10em;
-}
-#fabric span {
-  display:inline-block;
-  float: left;
-}
-
-#fabric {
-  border: 1px solid #000;
-  background-color: #eee;
-  display: inline-block;
-}
-
-#clearfix {
-	display:inline-block;
-	width:400px;
-	clear: both;
-	float: none;
-}
-
-#form {
-  display: inline-grid;
-  grid-template-columns: 50% 50%;
-  width: 500px;
-  vertical-align: top;
-}
-
-#right {
-  display: inline-block;
-}
-
-.error::after {
-  content: "Must be a number!";
-  color: red;
-  font-size: smaller;
-  padding-left: 0.5rem;
-}
-
-summary {
-  font-weight: bold;
-  font-size:larger;
-}
-
-@media print {
-  /* All your print styles go here */
- h1, details {
-    display: none !important;
-  }
-
-  #fabric {
-  border: 1px solid #000;
-  background-color: #fff;
-  display: inline-block;
-}
-}
-
-</style>
-<title>Kimono Pattern Generator</title>
+  <script type="module" src="/src/main.ts"></script>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link type="text/css" rel="stylesheet" media="all" href="/styles.css">
+  <title>Kimono Pattern Generator</title>
 </head>
+
 <body>
-<h1>Kimono Pattern Generator</h1>
-<details><summary>How to Measure</summary>
-<p>Most of the measurements should be fairly self-explanatory, with two main exceptions - shoulder and sleeve length.
-Most western garments put the shoulder seam right around the shoulder joint and end the sleeves at the wrist, making the shoulder measurement the distance between the two shoulder joints, and the sleeve length the distance from shoulder to wrist.</p>
+  <h1>Kimono Pattern Generator</h1>
+  <details>
+    <summary>How to Measure</summary>
+    <p>Most of the measurements should be fairly self-explanatory, with two main exceptions - shoulder and sleeve
+      length.
+      Most western garments put the shoulder seam right around the shoulder joint and end the sleeves at the wrist,
+      making the shoulder measurement the distance between the two shoulder joints, and the sleeve length the distance
+      from shoulder to wrist.</p>
 
-<p>This is not true of kimono. For a women's kimono, the shoulder seam sits halfway between the shoulder joint and the elbow, and the shoulder measurement is the distance between this point on one side of the body to the same point on the other side. The sleeve ends at the wrist, so sleeve length is the distance from theat shoulder seam point to the wrist.</p>
+    <p>This is not true of kimono. For a women's kimono, the shoulder seam sits halfway between the shoulder joint and
+      the elbow, and the shoulder measurement is the distance between this point on one side of the body to the same
+      point on the other side. The sleeve ends at the wrist, so sleeve length is the distance from theat shoulder seam
+      point to the wrist.</p>
 
-<p>Men's kimono are cut slightly narrower, with shorter sleeves compared to women's. The shoulder seam is a third of the way down from the shoulder joint to the elbow, and the sleeves end two-thirds of the way down from the elbow to the wrist.</p>
+    <p>Men's kimono are cut slightly narrower, with shorter sleeves compared to women's. The shoulder seam is a third of
+      the way down from the shoulder joint to the elbow, and the sleeves end two-thirds of the way down from the elbow
+      to the wrist.</p>
 
-<p>Sleeve width is highly variable, and depends on what style of garment you're going for. Men's sleeves tend to be relatively short - about a third of the final body length (your neck-to-floor measurement). Women's sleeves will have more variety, ranging from around the same lenght as men's sleeves all the way down to nearly knee-length.</p>
-</details>
-<form id="form">
-  <label for="fabric_width">Fabric width</label> <input type="number" name="fabric_width" id="fabric_width">
-  <fieldset>
-    <legend>Kimono style</legend>
-    <label for="mens">Men's</label></label><input type="radio" name="style" id="mens" value="mens" checked>
-    <label for="womens">Women's</label></label><input type="radio" name="style" id="womens" value="womens">
-  </fieldset>
-  <fieldset>
-    <legend>Measurement units</legend>
-    <label for="in">Inches</label></label><input type="radio" name="unit" id="in" value="in" checked>
-    <label for="cm">Centimeters</label></label><input type="radio" name="unit" id="cm" value="cm">
-  </fieldset>
-<label for="shoulder">Shoulder width</label> <input type="number" name="shoulder" id="shoulder" value="26" />
-<label for="height">Height</label> <input type="number" name="height" id="height" value="58" />
-<label for="shoulder_navel">Shoulder to navel</label> <input type="number" name="shoulder_navel" id="shoulder_navel" value="19" />
-<label for="neck_circ">Neck Circumference</label> <input type="number" name="neck_circ" id="neck_circ" value="14" />
-<label for="hips">Hip Circumference</label> <input type="number" name="hips" id="hips" value="38" />
-<label for="sleeve">Sleeve length</label> <input type="number" name="sleeve" id="sleeve" value="10" />
-<label for="neck_floor">Neck to floor distance</label> <input type="number" name="neck_floor" id="neck_floor" value="52" />
-<label for="shoulder_sternum">Shoulder to mid-sternum</label> <input type="number" name="shoulder_sternum" id="shoulder_sternum" value="6" />
-<label for="handspan">Width of spread hand</label> <input type="number" name="handspan" id="handspan" value="8" />
-<label for="palm">Width of palm</label> <input type="number" id="palm" name="palm" value="4" />
-<label for="sleeve_length">Sleeve width</label> <input type="number" id="sleeve_length" name="sleeve_length" value="30" />
-<button name="submit" id="submit">Generate</button>
-</form>
-<div id="right">
-  <b>Fabric length needed:</b> <span id="length"></span>
-  <br>
-  <div id="fabric" style="width:540px">
-  <span id="left_overlap"></span><span id="right_overlap"></span><span id="left_sleeve"></span><span id="right_sleeve"></span><span id="body"></span><span id="collar"></span><span id="clearfix"></span>
+    <p>Sleeve width is highly variable, and depends on what style of garment you're going for. Men's sleeves tend to be
+      relatively short - about a third of the final body length (your neck-to-floor measurement). Women's sleeves will
+      have more variety, ranging from around the same lenght as men's sleeves all the way down to nearly knee-length.
+    </p>
+  </details>
+  <div id="left">
+    <form id="form">
+      <label for="fabric_width">Fabric width</label> <input type="number" name="fabric_width" id="fabric_width">
+      <fieldset>
+        <legend>Kimono style</legend>
+        <label for="mens">Men's</label></label><input type="radio" name="style" id="mens" value="mens" checked>
+        <label for="womens">Women's</label></label><input type="radio" name="style" id="womens" value="womens">
+      </fieldset>
+      <fieldset>
+        <legend>Measurement units</legend>
+        <label for="in">Inches</label></label><input type="radio" name="unit" id="in" value="in" checked>
+        <label for="cm">Centimeters</label></label><input type="radio" name="unit" id="cm" value="cm">
+      </fieldset>
+      <label for="shoulder">Shoulder width</label> <input type="number" name="shoulder" id="shoulder" value="26" />
+      <label for="height">Height</label> <input type="number" name="height" id="height" value="58" />
+      <label for="shoulder_navel">Shoulder to navel</label> <input type="number" name="shoulder_navel"
+        id="shoulder_navel" value="19" />
+      <label for="neck_circ">Neck Circumference</label> <input type="number" name="neck_circ" id="neck_circ"
+        value="14" />
+      <label for="hips">Hip Circumference</label> <input type="number" name="hips" id="hips" value="38" />
+      <label for="sleeve">Sleeve length</label> <input type="number" name="sleeve" id="sleeve" value="10" />
+      <label for="neck_floor">Neck to floor distance</label> <input type="number" name="neck_floor" id="neck_floor"
+        value="52" />
+      <label for="shoulder_sternum">Shoulder to mid-sternum</label> <input type="number" name="shoulder_sternum"
+        id="shoulder_sternum" value="6" />
+      <label for="handspan">Width of spread hand</label> <input type="number" name="handspan" id="handspan" value="8" />
+      <label for="palm">Width of palm</label> <input type="number" id="palm" name="palm" value="4" />
+      <label for="sleeve_length">Sleeve width</label> <input type="number" id="sleeve_length" name="sleeve_length"
+        value="30" />
+      <button name="submit" id="submit">Generate</button> <button name="print" id="print">Print</button>
+    </form>
+    <div id="output">
+      <b>Fabric length needed:</b> <span id="length"></span>
+      <br>
+      <div id="cutlist">
+      </div>
+    </div>
   </div>
-</div>
+  <div id="right">
+    <div id="fabric" style="width:540px">
+      <span id="left_overlap"></span><span id="right_overlap"></span><span id="left_sleeve"></span><span
+        id="right_sleeve"></span><span id="body"></span><span id="collar"></span><span id="clearfix"></span>
+    </div>
+  </div>
 </body>
+
 </html>

@@ -1,0 +1,74 @@
+body {
+    font-family: 'Iowan Old Style', 'Palatino Linotype', 'URW Palladio L', P052, serif;
+  font-weight: normal;
+  margin: 0 10em 0 10em;
+  }
+  #fabric span {
+    display:inline-block;
+    float: left;
+  }
+  
+  #fabric {
+    border: 1px solid #000;
+    background-color: #eee;
+    display: inline-block;
+  }
+  
+  #clearfix {
+      display:inline-block;
+      width:400px;
+      clear: both;
+      float: none;
+  }
+  
+  #form {
+    display: inline-grid;
+    grid-template-columns: 50% 50%;
+    width: 500px;
+    vertical-align: top;
+  }
+  #left {width: 500px;}
+  #right, #left {
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  .error::after {
+    content: "Must be a number!";
+    color: red;
+    font-size: smaller;
+    padding-left: 0.5rem;
+  }
+  
+  summary {
+    font-weight: bold;
+    font-size:larger;
+  }
+  
+  @media print {
+    /* All your print styles go here */
+    body {margin: 0}
+
+   h1, details, button {
+      display: none !important;
+    }
+  
+    #fabric {
+    border: 1px solid #000;
+    background-color: #fff;
+    display: inline-block;
+    break-inside: avoid;
+  }
+
+  input[type="number"] {
+    -webkit-appearance: textfield;
+       -moz-appearance: textfield;
+            appearance: textfield;
+  }
+  #form, #left {width: auto;}
+
+  input {
+    border: 0px;
+  }
+  }
+  

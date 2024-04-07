@@ -89,6 +89,15 @@ window.onload = function () {
     form.addEventListener("submit", generate);
   }
 
+  const printBtn = document.getElementById('print');
+  if (printBtn) {
+    printBtn.addEventListener('click', (e: Event) => {
+      e.preventDefault();
+      e.stopPropagation();
+      window.print()
+    });
+  }
+
   // const width = document.getElementById('fabric_width');
   // if (width) {
   //   width.addEventListener("change", resizeFabric);
@@ -138,6 +147,7 @@ function generate(e: Event): void {
     kimono.construct();
     const height = fabric?.clientHeight;
     const length_display = document.getElementById('length');
+    const cutlist = document.getElementById('cutlist');
     if (height && length_display) {
       const length = height / hardcoded[config.unit].scale;
       let output = '';
@@ -159,6 +169,9 @@ function generate(e: Event): void {
       }
 
       length_display.innerHTML = output;
+    }
+    if (cutlist) {
+      cutlist.innerHTML = kimono.cutList();
     }
 
 

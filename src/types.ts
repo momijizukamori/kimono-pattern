@@ -94,9 +94,11 @@ export abstract class KimonoPattern {
     c!: CalcMeasurements;
     h: HardcodedMeasurements;
     scale: number;
+    unit: UnitEnum;
 
     constructor(measurements: Measurements, unit: UnitEnum)  {
         let {scale, fold, sleeve, collar, radius} = hardcoded[unit];
+        this.unit = unit;
         this.m = measurements;
         this.scale = scale;
         this.h = {fold, sleeve, collar, radius};
@@ -110,6 +112,17 @@ export abstract class KimonoPattern {
 
     abstract construct(): RaphaelPaper[];
     abstract calculate(): void;
-
+    cutList() {
+        const formatVal = (val: number) => {
+            const scaled = val / this.scale;
+            return `${scaled}${(this.unit == 'cm' ? 'cm' : '"')}`
+        }
+        return `<h3>Cut list</h3>
+        <b>Body</b>: ${formatVal(this.c.bodywidth)} x ${formatVal(this.c.bodylength)}<br>
+        <b>Collar</b>: ${formatVal(this.c.collarwidth)} x ${formatVal(this.c.collarlength)}<br>
+        <b>Sleeves (x2)</b>: ${formatVal(this.c.sleevewidth)} x ${formatVal(this.c.sidelength)}<br>
+        <b>Overlap panel (x2)</b>: ${formatVal(this.c.overlapwidth)} x ${formatVal(this.c.overlaplength)}<br>
+        <b>Sleeves (x2)</b>: ${formatVal(this.c.sleevewidth)} x ${formatVal(this.c.sidelength)}<br>`
+    };
 
 }
