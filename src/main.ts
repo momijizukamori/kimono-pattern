@@ -3,6 +3,7 @@ import { WomensKimono } from './womens';
 import { measurementsSchema, configSchema, hardcoded } from './types';
 import { ZodError } from 'zod';
 import Raphael from 'raphael';
+import { toPng } from 'html-to-image';
 
 declare module "raphael" {
     interface RaphaelPaper {
@@ -98,26 +99,7 @@ window.onload = function () {
     });
   }
 
-  // const width = document.getElementById('fabric_width');
-  // if (width) {
-  //   width.addEventListener("change", resizeFabric);
-  // }
-
 }
-
-// function resizeFabric(e: Event): void {
-//   e.preventDefault();
-//   e.stopPropagation();
-//   const fabric_width = document.getElementById('fabric_width') as HTMLInputElement;
-//   const width = fabricWidthSchema.parse(fabric_width?.value);
-//   fabric_width.value = `${width}`; // in case we're using the default
-//   //let clearfix = document.getElementsByClassName('clearfix');
-//   let fabric = document.getElementById('fabric');
-//   if (fabric) {
-//     fabric.style.width = `${ width * 10 }px`
-//   }
-
-// }
 
 function generate(e: Event): void {
   e.preventDefault();
@@ -139,7 +121,7 @@ function generate(e: Event): void {
       kimono = new MensKimono(measurements, config.unit);
     }
 
-    let fabric = document.getElementById('fabric');
+    const fabric = document.getElementById('fabric');
     if (fabric) {
       fabric.style.width = `${ config.fabric_width * hardcoded[config.unit].scale }px`
     }
@@ -174,6 +156,17 @@ function generate(e: Event): void {
       cutlist.innerHTML = kimono.cutList();
     }
 
+    const fabricImg = document.getElementById('fabric-img') as HTMLImageElement;
+    if (fabric && fabricImg) {
+      toPng(fabric)
+        .then(function (dataUrl) {
+          fabricImg.src = dataUrl;
+          console.log("done");
+        })
+        .catch(function (error) {
+          console.error('oops, something went wrong!', error);
+        });
+    }
 
   } catch (error) {
     if (error instanceof ZodError) {
