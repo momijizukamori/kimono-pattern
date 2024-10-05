@@ -50,6 +50,11 @@ summary {
   font-size: larger;
 }
 
+details img {
+  width: 40%;
+  display:inline-block;
+}
+
 #fabric-img {
     display: none;
     max-height: 100vh;

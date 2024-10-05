@@ -43,19 +43,19 @@ export class WomensKimono extends KimonoPattern {
     construct() {
         var overlap_l = Raphael("left_overlap", this.c.overlapwidth, this.c.overlaplength);
         overlap_l.rect(0, 0, this.c.overlapwidth, this.c.overlaplength);
-        overlap_l.seam(0, 0, this.c.overlapwidth, this.c.overlapdiagonal);
+        overlap_l.seam(0, 0, this.c.overlapwidth, this.c.overlaplength - this.c.overlapdiagonal);
         overlap_l.measure(this.c.overlapwidth/2, this.c.overlaplength - this.scale, this.c.overlapwidth, this.scale, false);
         overlap_l.measure(this.scale, this.c.overlaplength/2, this.c.overlaplength, this.scale, true);
-        overlap_l.measure(this.c.overlapwidth - this.scale, this.c.overlaplength/4, this.c.overlapdiagonal, this.scale, true);
-        overlap_l.measure(this.c.overlapwidth - this.scale, this.c.overlaplength * .75, this.c.overlaplength - this.c.overlapdiagonal, this.scale, true);
+        overlap_l.measure(this.c.overlapwidth - this.scale, this.c.overlaplength/4, this.c.overlaplength - this.c.overlapdiagonal, this.scale, true);
+        overlap_l.measure(this.c.overlapwidth - this.scale, this.c.overlaplength * .75, this.c.overlapdiagonal, this.scale, true);
         
         var overlap_r = Raphael("right_overlap", this.c.overlapwidth, this.c.overlaplength);
         overlap_r.rect(0, 0, this.c.overlapwidth, this.c.overlaplength);
-        overlap_r.seam(0, this.c.overlapdiagonal, this.c.overlapwidth, 0);
+        overlap_r.seam(0, this.c.overlaplength - this.c.overlapdiagonal, this.c.overlapwidth, 0);
         overlap_r.measure(this.c.overlapwidth/2, this.c.overlaplength - this.scale, this.c.overlapwidth, this.scale, false);
         overlap_r.measure(this.c.overlapwidth - this.scale, this.c.overlaplength/2, this.c.overlaplength, this.scale, true);
-        overlap_r.vm_line(this.scale/2, 0, this.c.overlapdiagonal, this.scale, this.c.overlapdiagonal);
-        overlap_r.vm_line(this.scale/2, this.c.overlapdiagonal, this.c.overlaplength, this.scale, this.c.overlaplength - this.c.overlapdiagonal);
+        overlap_r.vm_line(this.scale/2, 0, this.c.overlaplength - this.c.overlapdiagonal, this.scale, this.c.overlaplength - this.c.overlapdiagonal);
+        overlap_r.vm_line(this.scale/2, this.c.overlaplength - this.c.overlapdiagonal, this.c.overlaplength, this.scale, this.c.overlapdiagonal);
         
         
         var sleeve_l = Raphael("left_sleeve", this.c.sleevewidth, this.c.sleevelength);
